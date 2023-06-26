@@ -1,10 +1,9 @@
-<p align="center">
-<img src="https://i.imgur.com/Clzj7Xs.png" alt="osTicket logo"/>
+<p align="center"> 
+<img src="https://i.imgur.com/awz0ZA7.png" height="50%" width="50%" alt="Microsoft Active Directory"/>
 </p>
 
-<h1>Configuring Active Directory</h1>
-This tutorial outlines how to add users to the Active Directory (AD).<br />
-
+<h1>Configure Active Directory</h1>
+This tutorial outlines how to install Active Directory (AD) and configure AD.<br />
 
 
 <h2>Environments and Technologies Used</h2>
@@ -42,11 +41,19 @@ In Microsoft Azure, create a VM, which will act as the Client. Be sure to select
 </p>
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p> 
+<img src="https://i.imgur.com/iBPMiat.png" height="80%" width="80%" alt="Connect to Remote Desktop"/>
 </p>
 <p>
-Description
+In Microsoft Azure, collect the DC-1's and Client's IP address. In Microsoft Remote Desktop, add PC with the respective IP Address, then connect. 
+</p>
+<br />
+
+<p> 
+<img src="https://i.imgur.com/RYleh3z.pn" height="80%" width="80%" alt="Install AD"/>
+</p>
+<p>
+In the Server Manager, select "Add Roles and Features." In the section "Server Roles," check the box for "Active Directory Domain Services." Check Add. 
 </p>
 <br />
 
@@ -80,6 +87,14 @@ Description
 <p>
 Description
 </p>
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Description
+</p>
+<br />
 <br />
 
 <p>
@@ -88,6 +103,35 @@ Description
 <p>
 Description
 </p>
+<br />
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Description
+</p>
+<br />
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Description
+</p>
+<br />
+<br />
+
+<p>
+<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+<p>
+Description
+</p>
+<br />
+<br />
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
