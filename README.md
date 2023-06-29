@@ -1,5 +1,6 @@
 <p align="center"> 
-<img src="https://i.imgur.com/awz0ZA7.png" height="50%" width="50%" alt="Microsoft Active Directory"/>
+<img src="https://i.imgur.com/gW9mWz0.png"  height="50%" width="50%" alt="Microsoft Active Directory" /></a>  
+
 </p>
 
 <h1>Configure Active Directory</h1>
@@ -21,7 +22,6 @@ This tutorial outlines how to install Active Directory (AD) and configure AD.<br
 
 - Create two Virtual Machines (Domain Controller and Client)
 - Configure in Server Manager the Active Directory
-- 
 
 <h2>Rename</h2>
 
@@ -50,10 +50,26 @@ In Microsoft Azure, collect the DC-1's and Client's IP address. In Microsoft Rem
 <br />
 
 <p> 
-<img src="https://i.imgur.com/RYleh3z.pn" height="80%" width="80%" alt="Install AD"/>
+<img src="https://i.imgur.com/QZ6Nsjw.png" height="80%" width="80%" alt="Install AD"/>
 </p>
 <p>
-In the Server Manager, select "Add Roles and Features." In the section "Server Roles," check the box for "Active Directory Domain Services." Check Add. 
+In the Server Manager, select "Add Roles and Features." In the section "Server Roles," check the box for "Active Directory Domain Services." Check Add. Click Install. 
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/LkQvtEa.png" height="80%" width="80%" alt="AddRoles"/>
+</p>
+<p>
+Once the initial installation is complete, a yellow triangle will appear by the flag. Click on it. Click on "Promote this server to a domain controller."
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/mwnT8Xb.png" height="80%" width="80%" alt="AddRoles"/>
+</p>
+<p>
+In the Deployment Configuration, check "Add a a new forest." In the empty box next to Root domain name, insert the name of your domain controller. In this case, mydomain.com. Click Next until "Install" is an option, and click on it.
 </p>
 <br />
 
@@ -66,15 +82,7 @@ Description
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Description
-</p>
-<br />
-
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src= height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Description
