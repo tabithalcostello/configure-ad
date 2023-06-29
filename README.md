@@ -78,47 +78,44 @@ Once the initial installation is complete, a yellow triangle will appear by the 
 <img src="https://i.imgur.com/mwnT8Xb.png" height="80%" width="80%" alt="AddRoles"/>
 </p>
 <p>
-In the Deployment Configuration, check "Add a a new forest." In the empty box next to Root domain name, insert the name of your domain controller. In this case, mydomain.com. Click Next. Insert password when prompted. Click until "Install" is an option, and click on it. The computer will Restart upon complete installation.
+In the Deployment Configuration, check "Add a a new forest." In the empty box next to Root domain name, insert the name of your domain controller. In this case, mydomain.com. Click Next. Insert password when prompted. Click until "Install" is an option, and click on it. The computer will Restart upon complete installation. Log into your DC with your domain name with user name. [Ex. mydomain.com\labuser]
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Zp3qb7V.png" height="80%" width="80%" alt="AD Users and Computers"/>
 </p>
-<p>
-Log into your DC with your domain name with user name. [Ex. mydomain.com\labuser]
+<p> In the Serevr Manager's Tools, Select "Active Directory Users and Computers."  
+
 </p>
 <br />
 
 <p>
-<img src= height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/MYLzLe3.png" height="80%" width="80%" alt="Organizational Units"/>
 </p>
-<p>
-Description
+<p> In mydomain.com, add Organizational Units: "_ADMIN" and "_EMPLOYEES".
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/Ni0WXfO.png" height="80%" width="80%" alt="Add Administrator"/>
 </p>
-<p>
-Description
+<p> In the _ADMIN folder, add a user. For this instance, Jane Doe with the username of jane_admin will be an administrator.
 </p>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/FHTQ50Y.png" height="80%" width="80%" alt="Add Member of"/>
 </p>
-<p>
-Description
+<p> In Jane's Properties, go to "Member Of", add "Administrators", and add Jane to this group. (If "Administrators" is not already listed, it can be added to the list of groups.) Sign out of DC. Log back in as: mydomain.com\jane_admin.
 </p>
 <br />
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/6220JMa.png" height="80%" width="80%" alt="DNS Settings"/>
 </p>
 <p>
-Description
+Returning to Azure, select Client VM. Set Client VM's DNS settings to DC's private ip adddress.
 </p>
 <br />
 <br />
