@@ -29,7 +29,7 @@ This tutorial outlines how to install Active Directory (AD) and configure AD.<br
 <img src="https://i.imgur.com/qTktgXH.png" height="80%" width="80%" alt="Create a Domain Controller"/>
 </p>
 <p>
-In Microsoft Azure, create a Virtual Machine (VM). The first VM will be set up to be the Domain Controller (DC). Add a Resource Group Name (AD-Lab). Add a VM name (DC-1). Select Windows Server 22 Data Center. Select an appropriate VM size (Standard 2vpcu and 16 Gib Memory). Create and record username and password. 
+In Microsoft Azure, create a Virtual Machine (VM). The first VM will be set up to be the Domain Controller (DC). Add a Resource Group Name (AD-Lab). Add a VM name (DC-1). Select Windows Server 22 Data Center. Select an appropriate VM size (Standard 2vpcu and 16 Gib Memory). Create and record username and password. Once created in Azure, open DC-1's "Networking." Click to the right of the Network Interface:[i.e. “dc-1402]. Click: “IP Configurations > Under “Name." Select appropriate “ipconfig1." Select: “Static." Save.
 </p>
 <br />
 
