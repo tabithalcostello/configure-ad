@@ -121,27 +121,25 @@ Returning to Azure, select Client VM. In Networking, click to the right of Netwo
 <br />
 
 <p align="center">
-<img src="https://i.imgur.com/pxgSN2m.png" height="50%" width="40%" alt="Rename PC"/> <img src= "https://i.imgur.com/dLdeCms.png" height="50%" width="40%" alt="Rename PC"/>
+<img src="https://i.imgur.com/pxgSN2m.png" height="30%" width="30%" alt="Rename PC"/> <img src= "https://i.imgur.com/dLdeCms.png" height="30%" width="30%" alt="Rename PC"/><img src= "https://i.imgur.com/I9kBFEC.png" height="30%" width="30%" alt="Rename PC"/>
 </p>
-<p align="center"> Connect and log into the Client VM. Go to System Settings. Click Rename PC. 
+<p align="center"> Connect and log into Client VM. Click Rename PC. Under the Computer Name tab in the section to rename computer or change its domain or workgroup, click Change. In Member Of (Domain), add "mydomain.com". Add administrator's information created in DC. The computer will restart to update the new name.
 </p>
 <br />
 <br />
 
 <p align="center">
-<img src="https://i.imgur.com/DJmEXEB.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/nc8iFCX.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
 </p>
-<p>
-Description
+<p> Log back into DC. In the Server Manager, return to the Active Directory Users and Computers. In mydomain.com, open Computers to see if the Client has been added. If so, add the Organizational Unit: _CLIENTS. Move Client from Computers to _CLIENTS. Log back into Client VM with mydomain.com\jane_admin credential. Go to System. Click Remote Desktop. Allow “domain users” access to remote desktop. 
 </p>
 <br />
 <br />
 
-<p>
+<p align="center">
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Description
 </p>
 <br />
 <br />
