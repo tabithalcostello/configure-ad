@@ -21,7 +21,10 @@ This tutorial outlines how to install Active Directory (AD) and configure AD.<br
 <h2> Process </h2>
 
 - Create two Virtual Machines (Domain Controller and Client)
-- Configure in Server Manager the Active Directory
+- Install and Configure in Server Manager the Active Directory
+- Connect Client to the Domain Controller
+- Create Users (Employees) in the Domain Controller 
+- Test Newly Created User's Login in the Client
 
 <h2>Demonstration</h2>
 
@@ -100,7 +103,7 @@ In the Deployment Configuration, check "Add a a new forest." In the empty box ne
 <p align="center">
 <img src="https://i.imgur.com/Ni0WXfO.png" height="50%" width="50%" alt="Add Administrator"/>
 </p>
-<p> In the _ADMIN folder, add a user. For this instance, Jane Doe with the username of jane_admin will be an administrator.
+<p align="center"> In the _ADMIN folder, add a user. For this instance, Jane Doe with the username of jane_admin will be an administrator.
 </p>
 
 <p align="center"> 
@@ -123,13 +126,13 @@ Returning to Azure, select Client VM. In Networking, click to the right of Netwo
 <p align="center">
 <img src="https://i.imgur.com/pxgSN2m.png" height="30%" width="30%" alt="Rename PC"/> <img src= "https://i.imgur.com/dLdeCms.png" height="30%" width="30%" alt="Rename PC"/><img src= "https://i.imgur.com/I9kBFEC.png" height="30%" width="30%" alt="Rename PC"/>
 </p>
-<p align="center"> Connect and log into Client VM. Click Rename PC. Under the Computer Name tab in the section to rename computer or change its domain or workgroup, click Change. In Member Of (Domain), add "mydomain.com". Add administrator's information created in DC. The computer will restart to update the new name.
+<p> Connect and log into Client VM. Click Rename PC. Under the Computer Name tab in the section to rename computer or change its domain or workgroup, click Change. In Member Of (Domain), add "mydomain.com". Add administrator's information created in DC. The computer will restart to update the new name.
 </p>
 <br />
 <br />
 
 <p align="center">
-<img src="https://i.imgur.com/nc8iFCX.png" height="50%" width="50%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/nc8iFCX.png" height="50%" width="50%" alt="Remote Desktop"/>
 </p>
 <p> Log back into DC. In the Server Manager, return to the Active Directory Users and Computers. In mydomain.com, open Computers to see if the Client has been added. If so, add the Organizational Unit: _CLIENTS. Move Client from Computers to _CLIENTS. Log back into Client VM with mydomain.com\jane_admin credential. Go to System. Click Remote Desktop. Allow “domain users” access to remote desktop. 
 </p>
@@ -137,18 +140,17 @@ Returning to Azure, select Client VM. In Networking, click to the right of Netwo
 <br />
 
 <p align="center">
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/spODyoM.png" height="45%" width="50%" alt="Generate Users"/><img src="https://i.imgur.com/SkNjcYu.png" height="30%" width="50%" alt="Generate Users"/>
 </p>
-<p>
+<p> Switch back to the DC, open up PowerShell_ise as an administrator. Insert a preformatted script to generate employee names with a password. (Employees can be added directly to the AD's mydomain.com's Organizational Unit _EMPLOYEES.)
 </p>
 <br />
 <br />
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<p align="center">
+<img src="https://i.imgur.com/nSepKpt.png" height="50%" width="50%" alt="Test User Login"/>
 </p>
-<p>
-Description
+<p> Log into the Client with a generated employee name or one entered directly in the AD. Permissions for each individual or group can be set in DC’s AD. This completes the tutorial on installing and configuring an AD. 
 </p>
 <br />
 <br />
